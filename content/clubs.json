@@ -1,0 +1,420 @@
+{
+  "_help": "Clubs & communities. Same format as experience.json. Clicking a club opens its profile page (#/org/{id}). Role dates use \"YYYY-MM\"; end can be \"present\". Roles are listed newest first. Anything starting with TODO stays hidden until you fill it in. blurb = the short phrase under the club's circle on the home page (what the club is).",
+  "clubs": [
+    {
+      "id": "knesis",
+      "name": "KNESIS",
+      "color": "#8E6CCB",
+      "logo": {
+        "src": "assets/knesis_logo.png",
+        "fit": "contain",
+        "pad": "5%"
+      },
+      "banner": {
+        "src": "assets/knesis_logo_banner.png",
+        "fit": "contain",
+        "position": "right",
+        "bg": "radial-gradient(120% 140% at 80% 30%, #4B3480 0%, #241A3D 55%, #120D1F 100%)"
+      },
+      "tagline": "K-pop cover dance team · NYU · est. 2017",
+      "blurb": "NYU’s K-pop cover dance team",
+      "location": "New York, NY",
+      "phrase": "Dance Instructor since 2024 and former Vice President.",
+      "about": "NYU's K-pop cover dance team: 150+ members performing 40+ covers around New York, with 20K+ followers across social channels.",
+      "roles": [
+        {
+          "title": "Dance Instructor",
+          "start": "2024-01",
+          "end": "2027-05"
+        },
+        {
+          "title": "Vice President",
+          "start": "2025-05",
+          "end": "2025-12"
+        },
+        {
+          "title": "PR Committee Member",
+          "start": "2024-01",
+          "end": "2024-05"
+        }
+      ],
+      "_note": "Add earlier KNESIS roles below Vice President if you had any.",
+      "skills": [
+        "Content strategy",
+        "Social media",
+        "Team leadership",
+        "Partnerships",
+        "Video editing"
+      ],
+      "chapters": [
+        {
+          "id": "kn-social-growth",
+          "title": "Growing KNESIS Online",
+          "subtitle": "Social media & marketing",
+          "metric": "2.5M+ views",
+          "summary": "Ran marketing for social channels with 20K+ followers, increasing content engagement by 50% and reaching 2.5M+ views.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Content strategy",
+            "Social media",
+            "Engagement",
+            "Video editing"
+          ]
+        },
+        {
+          "id": "kn-production",
+          "title": "40+ Covers, 150+ Members",
+          "subtitle": "Production & operations",
+          "metric": "40+ covers",
+          "summary": "Organized 40+ K-pop covers for 150+ members — managing budget, resolving scheduling conflicts, and raising performance quality.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Project management",
+            "Budgeting",
+            "Team leadership"
+          ]
+        },
+        {
+          "id": "kn-collabs",
+          "title": "Collabs incl. PUBG Studios",
+          "subtitle": "Partnerships",
+          "metric": "40+ collabs",
+          "summary": "Coordinated 40+ collaborations with student clubs and external organizations, including PUBG Studios, expanding the team's reach.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Partnerships",
+            "Gaming",
+            "Outreach"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acu",
+      "name": "Asian Cultural Union",
+      "color": "#D7262B",
+      "logo": {
+        "src": "assets/acu_logo.png",
+        "fit": "contain",
+        "pad": "6%"
+      },
+      "banner": {
+        "video": "assets/acu_banner_video.mp4",
+        "poster": "assets/acu_banner_poster.jpg",
+        "mark": "assets/acu_logo.png",
+        "position": "right",
+        "bg": "linear-gradient(120deg, #FFFFFF 0%, #FBEDEC 100%)"
+      },
+      "tagline": "Asian cultural community at NYU",
+      "blurb": "NYU’s Asian cultural community",
+      "location": "New York, NY",
+      "phrase": "President, after growing through the events and marketing committees.",
+      "about": "A community for Asian culture at NYU: large-scale cultural events, partnerships with local businesses and speakers, and a committee that runs like a product team.",
+      "roles": [
+        {
+          "title": "President",
+          "start": "2026-09",
+          "end": "2027-05"
+        },
+        {
+          "title": "Vice President of Events",
+          "start": "2025-09",
+          "end": "2025-12"
+        },
+        {
+          "title": "Marketing Committee Member",
+          "start": "2025-01",
+          "end": "2025-05"
+        },
+        {
+          "title": "Events Committee Member",
+          "start": "2024-01",
+          "end": "2024-12"
+        }
+      ],
+      "skills": [
+        "Event production",
+        "Partnerships",
+        "Leadership",
+        "Marketing"
+      ],
+      "chapters": [
+        {
+          "id": "acu-events",
+          "title": "20+ Cultural Events",
+          "subtitle": "Events & experiences",
+          "metric": "300+ per event",
+          "summary": "Planned 20+ large cultural events with 300+ attendees each, managing logistics, programming, and brand-consistent experiences.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Event production",
+            "Brand",
+            "Operations"
+          ]
+        },
+        {
+          "id": "acu-partners",
+          "title": "30+ Community Partners",
+          "subtitle": "Partnerships",
+          "metric": "30+ partners",
+          "summary": "Built and maintained relationships with 30+ local companies, speakers, vendors, and community partners to source event opportunities.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Partnerships",
+            "Relationship building"
+          ]
+        },
+        {
+          "id": "acu-team",
+          "title": "Cross-Functional Leadership",
+          "subtitle": "Weekly team syncs",
+          "metric": "Weekly",
+          "summary": "Led weekly cross-functional committee meetings, delegating responsibilities and resolving issues to ensure seamless events.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Leadership",
+            "Delegation",
+            "Cross-functional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bap",
+      "name": "Beta Alpha Psi",
+      "color": "#B5121B",
+      "logo": {
+        "src": "assets/bap_logo.webp",
+        "fit": "cover"
+      },
+      "banner": {
+        "bg": "linear-gradient(120deg, #5E0A0F 0%, #B5121B 55%, #C9B98A 130%)"
+      },
+      "tagline": "Finance & accounting honors society",
+      "blurb": "Finance & accounting honors society",
+      "location": "New York, NY",
+      "phrase": "Candidate Master Chair, after leading reporting and mentoring.",
+      "about": "An international honor organization for accounting, finance, and information systems students and professionals, founded in 1919.",
+      "roles": [
+        {
+          "title": "Candidate Master Chair",
+          "start": "2026-09",
+          "end": "2026-12"
+        },
+        {
+          "title": "Vice President of Reporting",
+          "start": "2026-01",
+          "end": "2026-05"
+        },
+        {
+          "title": "Vice Chair of Mentoring",
+          "start": "2025-09",
+          "end": "2025-12"
+        },
+        {
+          "title": "Mentoring Committee",
+          "start": "2025-01",
+          "end": "2025-05"
+        },
+        {
+          "title": "IBD Workshop Member",
+          "start": "2025-01",
+          "end": "2025-05"
+        }
+      ],
+      "skills": [
+        "Mentorship",
+        "Program management",
+        "Reporting"
+      ],
+      "chapters": [
+        {
+          "id": "bap-candidates",
+          "title": "Candidate Experience",
+          "subtitle": "Mentorship & belonging",
+          "metric": "250+ candidates",
+          "summary": "Ran creative events for 250+ candidates, facilitating professional mentorship and building a strong sense of unity and belonging.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Mentorship",
+            "Community",
+            "Program design"
+          ]
+        },
+        {
+          "id": "bap-workshops",
+          "title": "60+ Hours of Programming",
+          "subtitle": "Workshops & service",
+          "metric": "60+ hours",
+          "summary": "Structured 60+ hours of workshops and community service events, prioritizing professional development and philanthropic engagement.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Program management",
+            "Prioritization"
+          ]
+        },
+        {
+          "id": "bap-inquiries",
+          "title": "200+ Member Cases",
+          "subtitle": "Member support",
+          "metric": "200+ inquiries",
+          "summary": "Managed 200+ individual inquiries about extenuating circumstances, improving community involvement and increasing participation.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Member support",
+            "Operations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "techatnyu",
+      "name": "Tech@NYU",
+      "color": "#7C3AED",
+      "logo": {
+        "src": "assets/techatnyu_logo.png",
+        "fit": "cover"
+      },
+      "banner": {
+        "bg": "linear-gradient(120deg, #050507 0%, #1B1236 55%, #57068C 130%)"
+      },
+      "tagline": "NYU’s largest tech community",
+      "blurb": "NYU’s student tech community",
+      "location": "New York, NY",
+      "website": "https://techatnyu.org",
+      "phrase": "Software engineer on the Development Team.",
+      "about": "A student-run tech organization at NYU that hosts events, programs, and speaker series, and builds software for the NYU community through its Development Team.",
+      "roles": [
+        {
+          "title": "Development Team SWE",
+          "start": "2025-09",
+          "end": "2025-12"
+        }
+      ],
+      "skills": [
+        "Software engineering",
+        "JavaScript",
+        "Teamwork"
+      ],
+      "chapters": [
+        {
+          "id": "tech-1",
+          "title": "Building with the Dev Team",
+          "subtitle": "Software engineering",
+          "summary": "TODO: one or two sentences on what you built on the Development Team.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Software engineering"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "netimpact",
+      "name": "Net Impact",
+      "color": "#1C7ED6",
+      "logo": {
+        "src": "assets/netimpact_logo.jpg",
+        "fit": "cover"
+      },
+      "banner": {
+        "src": "assets/netimpact_logo_banner.webp",
+        "fit": "contain",
+        "position": "center",
+        "bg": "linear-gradient(120deg, #FFFFFF 0%, #E6F3FC 100%)"
+      },
+      "tagline": "Sustainability & social impact · NYU",
+      "blurb": "Business for social & environmental impact",
+      "location": "New York, NY",
+      "phrase": "Sustainability consulting and impact financial analysis.",
+      "about": "Part of Net Impact, a nonprofit community of students and professionals using business skills to drive social and environmental change.",
+      "roles": [
+        {
+          "title": "Impact Financial Analyst",
+          "start": "2024-09",
+          "end": "2024-12"
+        },
+        {
+          "title": "Sustainability Consulting Associate",
+          "start": "2024-02",
+          "end": "2024-05"
+        }
+      ],
+      "skills": [
+        "Sustainability",
+        "Consulting",
+        "Financial analysis"
+      ],
+      "chapters": [
+        {
+          "id": "netimpact-1",
+          "title": "TODO: a project or result you're proud of",
+          "metric": "TODO",
+          "summary": "TODO: a project or result you're proud of",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "synchronic",
+      "name": "Synchronic Dance Team",
+      "color": "#8B2D55",
+      "logo": {
+        "src": "assets/synchronic_logo.jpg",
+        "fit": "cover"
+      },
+      "banner": {
+        "bg": "linear-gradient(120deg, #3A1426 0%, #8B2D55 60%, #B9A6D6 130%)"
+      },
+      "tagline": "Dance team · NYU",
+      "blurb": "NYU dance team",
+      "location": "New York, NY",
+      "phrase": "Dancer on NYU's Synchronic Dance Team.",
+      "about": "TODO: one sentence on what Synchronic Dance Team is.",
+      "roles": [
+        {
+          "title": "Dancer",
+          "start": "2023-09",
+          "end": "2024-12"
+        }
+      ],
+      "skills": [
+        "Dance",
+        "Performance",
+        "Teamwork"
+      ],
+      "chapters": [
+        {
+          "id": "syn-1",
+          "title": "TODO: a performance or moment you're proud of",
+          "summary": "TODO: one or two sentences about it.",
+          "story": [
+            "TODO: the longer story."
+          ]
+        }
+      ]
+    }
+  ]
+}

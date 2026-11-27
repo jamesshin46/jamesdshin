@@ -33,7 +33,11 @@ Read these files **in this order** before writing any code:
   Spotify's name, logo, wordmark, signature green (#1DB954), or their font. Do not use the word
   "Wrapped" in the UI — the feature is called **"Recap"**. Do not use YouTube, Instagram, or any
   label/agency logos except small generic platform icons on links (draw simple ones in SVG or use
-  text labels).
+  text labels). Exception (added by James): logos and banners of James's own employers and clubs,
+  supplied by him in `assets/`, are used on the Experience / Clubs sections and profile pages.
+  Exception 2: the welcome popup's song search uses Spotify's API (via a Supabase Edge Function)
+  and shows a small "Results from Spotify" credit and "Play on Spotify" links, as Spotify's
+  developer terms require attribution. Still no Spotify logo, green, or font.
 - **Privacy:** never add James's phone number or home address anywhere — not in HTML, JSON, meta
   tags, or the résumé PDF link text.
 - **Accessibility:** semantic HTML, keyboard navigable, visible focus rings, `alt` text on images,
@@ -50,14 +54,16 @@ index.html
 css/style.css              (can split into multiple files if it grows large)
 js/main.js                 (entry; imports modules below)
 js/data.js                 (fetch + cache content JSON and data/views.json)
-js/render-artist.js        (header, popular, discography, fans-also-like, about, contact)
-js/album-view.js           (album detail / tracklist panel)
-js/player.js               (YouTube modal + now-playing bar state)
+js/render-artist.js        (home: hero, listener pick, experience/clubs/education, covers, about, contact)
+js/org-view.js             (album page for each experience/club/education: chapters, role timeline, up next)
+js/orgs.js                 (org logos + date math)
+js/player.js               (chapter playback, YouTube modal, now-playing bar)
+js/welcome.js, owner.js, backend.js (guestbook popup, hidden owner view, Supabase)
 js/recap.js                (Recap story experience)
 js/search.js
 js/places-map.js           (Leaflet map modal for cafés & Asian cuisine)
 js/utils.js                (formatNumber, timeAgo, greeting, etc.)
-content/                   (already provided — do not restructure)
+content/                   (experience/clubs/education.json = album pages with chapters; covers.json = dance videos)
 data/views.json            (already provided as a seed; overwritten hourly by the GitHub Action)
 scripts/fetch-views.mjs    (already provided)
 .github/workflows/update-views.yml (already provided)

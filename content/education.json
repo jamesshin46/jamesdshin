@@ -1,0 +1,221 @@
+{
+  "_help": "Education pages, same format as experience.json.",
+  "items": [
+    {
+      "id": "nyu",
+      "name": "NYU Stern",
+      "color": "#57068C",
+      "logo": {
+        "src": "assets/nyustern_logo.jpg",
+        "fit": "cover"
+      },
+      "banner": {
+        "src": "assets/nyustern_logo_banner.png",
+        "fit": "contain",
+        "position": "center",
+        "bg": "linear-gradient(120deg, #3D0466 0%, #57068C 60%, #7B3FB0 100%)"
+      },
+      "tagline": "Business, Concentrations in Finance and Data Science, and Computer Science",
+      "location": "New York, NY",
+      "phrase": "Finance + Data Science + Computer Science. GPA 3.80.",
+      "about": "NYU Leonard N. Stern School of Business, where I study Business, Concentrations in Finance and Data Science, and Computer Science. I started at NYU in Economics + Computer Science and transferred into Stern in September 2024.",
+      "roles": [
+        {
+          "title": "Finance + Data Science + Computer Science",
+          "team": "NYU Stern · Class of 2027",
+          "start": "2024-09",
+          "end": "present"
+        },
+        {
+          "title": "Economics + Computer Science",
+          "team": "NYU",
+          "start": "2023-09",
+          "end": "2024-08"
+        }
+      ],
+      "skills": [
+        "Finance",
+        "Data science",
+        "Computer science"
+      ],
+      "chapters": [
+        {
+          "id": "nyu-gpa",
+          "title": "Finance + Data Science + Computer Science",
+          "subtitle": "Major",
+          "metric": "3.80 GPA",
+          "summary": "Business, Concentrations in Finance and Data Science, and Computer Science.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Finance",
+            "Data science",
+            "Computer science"
+          ]
+        },
+        {
+          "id": "nyu-transfer",
+          "title": "The switch to Stern",
+          "subtitle": "Sep 2024",
+          "metric": "Transferred",
+          "summary": "Moved from NYU Economics + Computer Science into NYU Stern in September 2024 to study Finance, Data Science, and Computer Science.",
+          "story": [
+            "TODO: why you made the switch, and what changed for you after it."
+          ],
+          "skills": [
+            "Finance",
+            "Data science"
+          ]
+        },
+        {
+          "id": "nyu-splitlease",
+          "title": "SplitLease",
+          "subtitle": "Personal project · JavaScript, CSS",
+          "metric": "Built it",
+          "summary": "TODO: one or two sentences on what SplitLease does and who it's for. Add a link if it's live or on GitHub.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "JavaScript",
+            "CSS",
+            "Product building"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yonsei",
+      "name": "Yonsei University",
+      "color": "#003876",
+      "logo": {
+        "src": "assets/yonsei_logo.png",
+        "fit": "contain",
+        "pad": "4%"
+      },
+      "banner": {
+        "src": "assets/yonsei_logo_banner.png",
+        "fit": "contain",
+        "position": "center",
+        "bg": "linear-gradient(120deg, #FFFFFF 0%, #E6EDF7 100%)"
+      },
+      "tagline": "Business Administration and Management · Seoul",
+      "location": "Seoul, South Korea",
+      "website": "https://www.yonsei.ac.kr/en_sc/",
+      "phrase": "A semester studying business in Seoul.",
+      "about": "One of Korea’s oldest and most prestigious private universities, founded in 1885 in Seoul.",
+      "roles": [
+        {
+          "title": "Business Administration and Management",
+          "start": "2026-01",
+          "end": "2026-06"
+        }
+      ],
+      "skills": [
+        "Business administration",
+        "Korean",
+        "Global perspective"
+      ],
+      "localClubs": [
+        {
+          "id": "churrus",
+          "name": "Churrus",
+          "nameKo": "츄러스",
+          "logo": "assets/yonsei_churrus_logo.jpg",
+          "color": "#E0457B",
+          "kind": "K-pop cover dance team",
+          "role": "Cover Lead",
+          "about": "Yonsei’s central K-pop dance crew, performing covers at campus festivals, alumni events, and joint Yonsei–Korea University busking.",
+          "link": "https://www.youtube.com/@yonseichurrus"
+        },
+        {
+          "id": "mua",
+          "name": "MUA",
+          "nameKo": "무아",
+          "logo": "assets/yonsei_mua_logo.jpg",
+          "color": "#6FA3AE",
+          "kind": "Busking (music performance) club",
+          "role": "Guitar & Piano",
+          "about": "Yonsei’s central busking club: street performances around Sinchon, year-end concerts, and cover videos.",
+          "link": "https://www.youtube.com/@buskingmua"
+        },
+        {
+          "id": "sancmo",
+          "name": "Sancmo",
+          "nameKo": "상크모",
+          "logo": "assets/yonsei_sancmo_logo.jpg",
+          "color": "#E8B21C",
+          "kind": "Business-major Christian club",
+          "role": "Member",
+          "about": "The Christian fellowship of Yonsei’s business and economics colleges, founded in 1984, meeting weekly for worship and community."
+        }
+      ],
+      "chapters": [
+        {
+          "id": "yonsei-1",
+          "title": "A semester in Seoul",
+          "subtitle": "Jan – Jun 2026",
+          "summary": "Studied Business Administration and Management at Yonsei University in Seoul.",
+          "story": [
+            "TODO: what the semester was like — classes, what you learned, and how it changed your perspective."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stuyvesant",
+      "name": "Stuyvesant High School",
+      "color": "#1F4FA3",
+      "logo": {
+        "src": "assets/stuyvesant_logo.png",
+        "fit": "contain"
+      },
+      "banner": {
+        "bg": "linear-gradient(120deg, #0E1E40 0%, #1F4FA3 60%, #6D8FD1 120%)"
+      },
+      "tagline": "High School Diploma",
+      "location": "New York, NY",
+      "phrase": "Graduated June 2023 · National Merit Scholarship Finalist.",
+      "about": "One of New York City's specialized public high schools, focused on math, science, and technology.",
+      "roles": [
+        {
+          "title": "High School Diploma",
+          "team": "Graduated June 2023",
+          "start": "2019-09",
+          "end": "2023-06"
+        }
+      ],
+      "skills": [],
+      "chapters": [
+        {
+          "id": "stuy-gpa",
+          "title": "GPA",
+          "metric": "3.80/4.00",
+          "summary": "Graduated with a 3.80/4.00 GPA.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ]
+        },
+        {
+          "id": "stuy-sat",
+          "title": "SAT",
+          "metric": "1560/1600",
+          "summary": "Scored 1560/1600 on the SAT.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ]
+        },
+        {
+          "id": "stuy-awards",
+          "title": "Awards",
+          "metric": "3 honors",
+          "summary": "National Merit Scholarship Finalist, AP Scholar with Distinction, and QuestBridge Finalist.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>James Shin · Product · Strategy · Media</title>
   <meta name="theme-color" content="#0B0B0F">
+  <!-- YouTube embeds require the page to send its origin as the referrer -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +14,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
 
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/artist.css">
+  <link rel="stylesheet" href="./css/features.css">
+  <link rel="stylesheet" href="./css/org.css">
   <script type="module" src="./js/main.js"></script>
 </head>
 <body>
@@ -34,6 +39,10 @@
           <span class="nav-icon" data-icon="search" aria-hidden="true"></span>
           <span class="nav-label">Search</span>
         </a>
+        <a class="nav-item" href="#/owner" data-nav="owner" data-owner-only hidden>
+          <span class="nav-icon" data-icon="queue" aria-hidden="true"></span>
+          <span class="nav-label">Favorite songs</span>
+        </a>
       </nav>
 
       <section class="library" aria-labelledby="library-title">
@@ -47,7 +56,14 @@
 
     <!-- Main scrolling content: the router renders views into #view -->
     <main class="main" id="main" tabindex="-1">
-      <div class="view" id="view" aria-live="polite"></div>
+      <header class="topbar" id="topbar">
+        <div class="topbar-nav">
+          <button class="nav-arrow" id="nav-back" type="button" aria-label="Go back" title="Go back" data-icon="chevronLeft"></button>
+          <button class="nav-arrow" id="nav-fwd" type="button" aria-label="Go forward" title="Go forward" data-icon="chevronRight"></button>
+        </div>
+        <div class="topbar-title" id="topbar-title"></div>
+      </header>
+      <div class="view" id="view"></div>
     </main>
 
     <!-- Persistent now-playing bar -->
@@ -60,6 +76,12 @@
       </a>
       <a class="tab" href="#/search" data-nav="search">
         <span class="tab-icon" data-icon="search" aria-hidden="true"></span><span>Search</span>
+      </a>
+      <a class="tab" href="#/owner" data-nav="owner" data-owner-only hidden>
+        <span class="tab-icon" data-icon="queue" aria-hidden="true"></span><span>Songs</span>
+      </a>
+      <a class="tab" href="#/liked" data-nav="liked">
+        <span class="tab-icon" data-icon="heart" aria-hidden="true"></span><span>Liked</span>
       </a>
       <a class="tab" href="#/recap" data-nav="recap">
         <span class="tab-icon" data-icon="recap" aria-hidden="true"></span><span>Recap</span>

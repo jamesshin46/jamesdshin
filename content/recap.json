@@ -4,14 +4,20 @@
   "slides": [
     {
       "layout": "intro",
-      "bg": ["#4F7CFF", "#0B0B0F"],
+      "bg": [
+        "#4F7CFF",
+        "#0B0B0F"
+      ],
       "eyebrow": "RECAP",
       "headline": "James Shin",
       "body": "A quick tour of the last few years. Tap to continue."
     },
     {
       "layout": "stat",
-      "bg": ["#E0457B", "#2A0A1A"],
+      "bg": [
+        "#E0457B",
+        "#2A0A1A"
+      ],
       "eyebrow": "On stage & on screen",
       "stat": "2.5M+",
       "liveStat": null,
@@ -20,7 +26,10 @@
     },
     {
       "layout": "stat",
-      "bg": ["#FF4D5E", "#1A0B0F"],
+      "bg": [
+        "#FF4D5E",
+        "#1A0B0F"
+      ],
       "eyebrow": "Live right now",
       "stat": "—",
       "liveStat": "youtubeTotal",
@@ -29,20 +38,41 @@
     },
     {
       "layout": "list",
-      "bg": ["#E2563B", "#1F0B07"],
+      "bg": [
+        "#E2563B",
+        "#1F0B07"
+      ],
       "eyebrow": "Your top roles",
       "headline": "Where I've been building",
       "list": [
-        { "title": "Strategy&",           "subtitle": "Consulting Summer Associate · 2026" },
-        { "title": "Xing Fu Tang",        "subtitle": "Product Strategy & Operations · 2025–26" },
-        { "title": "Methix",              "subtitle": "Data Analyst · Music Tech · 2025" },
-        { "title": "Asian Cultural Union","subtitle": "President" },
-        { "title": "KNESIS",              "subtitle": "Vice President" }
+        {
+          "title": "Strategy&",
+          "subtitle": "Consulting Summer Associate · 2026"
+        },
+        {
+          "title": "Xing Fu Tang",
+          "subtitle": "Product Strategy & Operations · 2025–26"
+        },
+        {
+          "title": "Methix",
+          "subtitle": "Data Analyst · Music Tech · 2025"
+        },
+        {
+          "title": "Asian Cultural Union",
+          "subtitle": "President"
+        },
+        {
+          "title": "KNESIS",
+          "subtitle": "Vice President"
+        }
       ]
     },
     {
       "layout": "stat",
-      "bg": ["#C98A3D", "#1C1206"],
+      "bg": [
+        "#C98A3D",
+        "#1C1206"
+      ],
       "eyebrow": "Biggest impact",
       "stat": "$10M",
       "headline": "in client profit",
@@ -50,29 +80,56 @@
     },
     {
       "layout": "grid",
-      "bg": ["#2FB6C9", "#05171A"],
+      "bg": [
+        "#2FB6C9",
+        "#05171A"
+      ],
       "eyebrow": "By the numbers",
       "headline": "A few favorites",
       "list": [
-        { "title": "100K+", "subtitle": "views on a gamified ambassador campaign" },
-        { "title": "40%",   "subtitle": "faster go-to-market from a 25-KPI dashboard" },
-        { "title": "30+",   "subtitle": "sites in an expansion strategy" },
-        { "title": "50+",   "subtitle": "datasets for an AI music knowledge base" },
-        { "title": "20+",   "subtitle": "events with 300+ attendees each" },
-        { "title": "40+",   "subtitle": "dance covers produced" }
+        {
+          "title": "100K+",
+          "subtitle": "views on a gamified ambassador campaign"
+        },
+        {
+          "title": "40%",
+          "subtitle": "faster go-to-market from a 25-KPI dashboard"
+        },
+        {
+          "title": "30+",
+          "subtitle": "sites in an expansion strategy"
+        },
+        {
+          "title": "50+",
+          "subtitle": "datasets for an AI music knowledge base"
+        },
+        {
+          "title": "20+",
+          "subtitle": "events with 300+ attendees each"
+        },
+        {
+          "title": "40+",
+          "subtitle": "dance covers produced"
+        }
       ]
     },
     {
       "layout": "stat",
-      "bg": ["#7B4FD6", "#120A22"],
+      "bg": [
+        "#7B4FD6",
+        "#120A22"
+      ],
       "eyebrow": "Your top genre",
       "stat": "Product × Media",
-      "headline": "Business + Computer Science @ NYU Stern",
+      "headline": "Finance + Data Science + Computer Science @ NYU Stern",
       "body": "Korean (native) · Spanish (conversational) · 10 instruments · always finding a new café."
     },
     {
       "layout": "outro",
-      "bg": ["#8A6BFF", "#0B0B0F"],
+      "bg": [
+        "#8A6BFF",
+        "#0B0B0F"
+      ],
       "eyebrow": "Up next",
       "headline": "Paul, Weiss — January 2027",
       "body": "And after that? Building products people come back to — in music, video, and games."

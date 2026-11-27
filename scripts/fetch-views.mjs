@@ -1,10 +1,10 @@
-// Fetches live YouTube stats for every video in content/albums.json
+// Fetches live YouTube stats for every video in content/covers.json
 // and writes data/views.json. Runs hourly via .github/workflows/update-views.yml.
 // Requires env var YT_API_KEY. No dependencies (Node 20+ built-in fetch).
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
-const ALBUMS_PATH = 'content/albums.json';
+const COVERS_PATH = 'content/covers.json';
 const OUT_PATH = 'data/views.json';
 const API = 'https://www.googleapis.com/youtube/v3/videos';
 
@@ -14,15 +14,14 @@ if (!key) {
   process.exit(1);
 }
 
-const albums = JSON.parse(await readFile(ALBUMS_PATH, 'utf8')).albums ?? [];
+const covers = JSON.parse(await readFile(COVERS_PATH, 'utf8')).covers ?? [];
 const ids = [...new Set(
-  albums.flatMap(a => a.tracks ?? [])
-        .map(t => t.youtubeId)
+  covers.map(c => c.youtubeId)
         .filter(id => typeof id === 'string' && id && !id.startsWith('TODO'))
 )];
 
 if (ids.length === 0) {
-  console.log('No YouTube IDs found in albums.json; nothing to do.');
+  console.log('No YouTube IDs found in covers.json; nothing to do.');
   process.exit(0);
 }
 

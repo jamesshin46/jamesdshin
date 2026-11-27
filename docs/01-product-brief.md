@@ -46,5 +46,6 @@ the theme of the whole site. Keep visuals clean and professional.
 
 ## Out of scope (do not build)
 - Case studies, product teardowns, or pitches.
-- Blog, CMS, login, comments, analytics dashboards.
+- Blog, CMS, comments, analytics dashboards. (Exception, added by James: the welcome-popup
+  guestbook and the hidden owner view; see docs/03-features.md §11.)
 - Background music or autoplaying audio.

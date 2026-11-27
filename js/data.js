@@ -8,11 +8,15 @@ import { isTodo, present } from './utils.js';
 
 const FILES = {
   profile: 'content/profile.json',
-  albums: 'content/albums.json',
   recap: 'content/recap.json',
   nowPlaying: 'content/now-playing.json',
   interests: 'content/interests.json',
-  places: 'content/places.json'
+  places: 'content/places.json',
+  experience: 'content/experience.json',
+  clubs: 'content/clubs.json',
+  education: 'content/education.json',
+  covers: 'content/covers.json',
+  backend: 'content/backend.json'
 };
 const VIEWS_FILE = 'data/views.json';
 
@@ -21,16 +25,19 @@ export const store = {
   errors: [],
   todos: [],
   profile: {},
-  categories: [],
-  albums: [],
   recap: { slides: [] },
   nowPlaying: {},
   interests: [],
   places: { categories: [], tags: [], places: [] },
+  experience: [],
+  clubs: [],
+  education: [],
+  covers: [],
+  backend: {},
   views: { updatedAt: null, totalViews: null, videos: {} }
 };
 
-const albumsById = new Map();
+const orgsById = new Map();
 
 async function fetchJSON(path, { bust = false } = {}) {
   const url = bust ? `${path}?t=${Date.now()}` : path;
@@ -68,21 +75,31 @@ function clean(value, path, todos) {
 const arr = v => (Array.isArray(v) ? v : []);
 const obj = v => (v && typeof v === 'object' && !Array.isArray(v) ? v : {});
 
-function normalizeAlbums(raw) {
-  const categories = arr(raw.categories).filter(c => present(c?.id) && present(c?.label));
-  const albums = arr(raw.albums)
-    .filter(a => present(a?.id) && present(a?.title))
-    .map(a => {
-      const tracks = arr(a.tracks)
-        .filter(t => {
-          if (!present(t?.id) || !present(t?.title)) return false;
-          if (t.kind === 'video') return present(t.youtubeId);
-          return present(t.detail); // highlight tracks need their detail text
-        })
-        .map(t => ({ ...t, kind: t.kind === 'video' ? 'video' : 'highlight', skills: arr(t.skills).filter(present), albumId: a.id }));
-      return { ...a, tracks };
-    });
-  return { categories, albums };
+const validOrg = o => present(o?.id) && present(o?.name);
+
+/**
+ * Experience items, clubs, and education share one shape ("orgs"): each is an "album" page
+ * with a tracklist of chapters (deep-dive stories).
+ */
+function normalizeOrg(o, kind) {
+  const media = v => (v && typeof v === 'object' ? v : present(v) ? { src: v } : {});
+  const chapters = arr(o.chapters)
+    .filter(c => present(c?.id) && present(c?.title) && present(c?.summary))
+    .map(c => ({
+      ...c,
+      orgId: o.id,
+      story: (Array.isArray(c.story) ? c.story : [c.story]).filter(present),
+      skills: arr(c.skills).filter(present)
+    }));
+  return {
+    ...o,
+    kind,
+    logo: media(o.logo),
+    banner: media(o.banner),
+    roles: arr(o.roles).filter(r => present(r?.title)),
+    skills: arr(o.skills).filter(present),
+    chapters
+  };
 }
 
 function normalizeProfile(p) {
@@ -95,7 +112,6 @@ function normalizeProfile(p) {
     quickFacts: arr(p.quickFacts).filter(f => present(f?.label) && present(f?.value)),
     searchKeywords: arr(p.searchKeywords).filter(present),
     greetings: obj(p.greetings),
-    popular: arr(p.popular),
     contact: { ...contact, links: arr(contact.links).filter(l => present(l?.url) && present(l?.label)) }
   };
 }
@@ -133,7 +149,6 @@ export async function loadAll() {
   keys.forEach((k, i) => (raw[k] = clean(results[i] ?? {}, FILES[k].replace('content/', ''), todos)));
 
   store.profile = normalizeProfile(raw.profile);
-  Object.assign(store, normalizeAlbums(obj(raw.albums)));
   store.recap = { ...obj(raw.recap), slides: arr(raw.recap?.slides).filter(s => present(s?.layout)) };
   store.nowPlaying = obj(raw.nowPlaying);
   store.interests = arr(raw.interests?.interests).filter(i => {
@@ -142,13 +157,14 @@ export async function loadAll() {
     return present(i.detail);
   });
   store.places = normalizePlaces(raw.places);
+  store.experience = arr(raw.experience?.items).filter(validOrg).map(o => normalizeOrg(o, 'experience'));
+  store.clubs = arr(raw.clubs?.clubs).filter(validOrg).map(o => normalizeOrg(o, 'club'));
+  store.education = arr(raw.education?.items).filter(validOrg).map(o => normalizeOrg(o, 'education'));
+  orgsById.clear();
+  allOrgs().forEach(o => orgsById.set(o.id, o));
+  store.covers = arr(raw.covers?.covers).filter(c => present(c?.id) && present(c?.title) && present(c?.youtubeId));
+  store.backend = obj(raw.backend);
   store.views = normalizeViews(rawViews);
-
-  albumsById.clear();
-  store.albums.forEach(a => albumsById.set(a.id, a));
-
-  // Popular rows must point at a track that's actually visible.
-  store.profile.popular = store.profile.popular.filter(p => present(p?.title) && getTrack(p.albumId, p.trackId));
 
   store.todos = todos;
   store.loaded = results.some(Boolean);
@@ -170,13 +186,6 @@ export async function refreshViews() {
 
 /* ---------- Lookups ---------- */
 
-export const getAlbum = id => albumsById.get(id) ?? null;
-
-export function getTrack(albumId, trackId) {
-  return getAlbum(albumId)?.tracks.find(t => t.id === trackId) ?? null;
-}
-
-export const allTracks = () => store.albums.flatMap(a => a.tracks);
 
 /** Live view count for a YouTube id, or null. */
 export function viewCount(youtubeId) {
@@ -194,3 +203,21 @@ export function youtubeTotal() {
   if (!hasLiveViews()) return null;
   return Object.values(store.views.videos).reduce((sum, v) => sum + (Number.isFinite(v?.viewCount) ? v.viewCount : 0), 0);
 }
+
+export const getOrg = id => orgsById.get(id) ?? null;
+
+/** Every page in "playlist" order: experience → clubs → education. */
+export const allOrgs = () => [...store.experience, ...store.clubs, ...store.education];
+
+/** The page after this one in playlist order (wraps around). */
+export function nextOrg(id) {
+  const list = allOrgs();
+  const i = list.findIndex(o => o.id === id);
+  return list.length > 1 && i >= 0 ? list[(i + 1) % list.length] : null;
+}
+
+export function getChapter(orgId, chapterId) {
+  return getOrg(orgId)?.chapters.find(c => c.id === chapterId) ?? null;
+}
+
+export const coversFor = orgId => store.covers.filter(c => c.orgId === orgId);

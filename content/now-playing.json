@@ -3,14 +3,14 @@
   "default": {
     "label": "NOW PLAYING",
     "title": "Senior year @ NYU Stern",
-    "subtitle": "Business + Computer Science · Class of 2027",
+    "subtitle": "Finance + Data Science + Computer Science · Class of 2027",
     "artwork": null,
-    "albumId": "nyu"
+    "orgId": "nyu"
   },
   "upNext": {
     "label": "UP NEXT",
     "title": "Paul, Weiss",
     "subtitle": "Restructuring & Business Analyst Intern · Jan 2027",
-    "albumId": "paulweiss"
+    "orgId": "paulweiss"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "_help": "Connects the welcome popup + owner view to your Supabase database (see supabase/README.md). These values are safe to be public: the database itself decides who can read what. Until they're filled in, the site runs in demo mode (saved only in your own browser). Never put your password or the 'service_role' / secret key here.",
+  "supabaseUrl": "https://lxrznkhblnbinphmfxsm.supabase.co/rest/v1/",
+  "supabaseAnonKey": "sb_publishable_8ySIDNk9AeYuMAQ7dxddPg_JzvuyeUa",
+  "ownerEmail": "js13820@stern.nyu.edu"
+}

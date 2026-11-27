@@ -1,0 +1,389 @@
+{
+  "_help": "Experience (newest first). Clicking a row opens its profile page (#/org/{id}). Role dates use \"YYYY-MM\"; end can be \"present\". logo.fit: \"cover\" fills the tile (for square logos with their own background), \"contain\" pads it on white (for transparent logos). banner: src (main art), optional mark (second image shown on the left), bg (any CSS color/gradient), fit, position. No banner src = a generated banner from color + logo.",
+  "items": [
+    {
+      "id": "paulweiss",
+      "name": "Paul, Weiss",
+      "status": "upcoming",
+      "start": "2027-01-04",
+      "color": "#14325C",
+      "logo": {
+        "src": "assets/paulweiss_logo.png",
+        "fit": "cover"
+      },
+      "banner": {
+        "bg": "linear-gradient(120deg, #0B1F3A 0%, #14325C 55%, #24508F 100%)"
+      },
+      "tagline": "Paul, Weiss, Rifkind, Wharton & Garrison LLP",
+      "location": "New York, NY",
+      "website": "https://www.paulweiss.com",
+      "phrase": "Joining the restructuring team in New York.",
+      "about": "A New York–based global law firm. Its restructuring practice advises companies, creditors, and investors through complex financial situations.",
+      "roles": [
+        {
+          "title": "Restructuring & Business Analyst Intern",
+          "start": "2027-01"
+        }
+      ],
+      "skills": [
+        "Restructuring",
+        "Financial analysis"
+      ],
+      "chapters": []
+    },
+    {
+      "id": "strategyand",
+      "name": "Strategy&",
+      "color": "#C8362B",
+      "logo": {
+        "src": "assets/strategyand_logo.jpg",
+        "fit": "cover"
+      },
+      "banner": {
+        "src": "assets/strategyand_logo_banner.svg",
+        "fit": "contain",
+        "position": "center",
+        "bg": "linear-gradient(120deg, #F7F3EC 0%, #EFE6DA 100%)"
+      },
+      "tagline": "Strategy consulting · Part of the PwC network",
+      "location": "New York, NY",
+      "website": "https://www.strategyand.pwc.com",
+      "phrase": "Tech strategy, 15+ financial models, and a 22-initiative roadmap for enterprise clients.",
+      "about": "PwC's global strategy consulting business (formerly Booz & Company). It helps clients shape their strategy and build the capabilities to deliver it.",
+      "roles": [
+        {
+          "title": "Consulting Summer Associate",
+          "team": "Enterprise & Functional Strategy",
+          "start": "2026-06",
+          "end": "2026-08"
+        }
+      ],
+      "skills": [
+        "Strategy",
+        "Financial modeling",
+        "Technology implementation",
+        "Roadmapping",
+        "Presenting"
+      ],
+      "chapters": [
+        {
+          "id": "sa-tech-strategy",
+          "title": "End-to-End Tech Implementation Strategy",
+          "subtitle": "Client strategy",
+          "metric": "$10M profit lift",
+          "summary": "Constructed an end-to-end technology implementation strategy for clients, stabilizing business operations and increasing profits by $10M.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Strategy",
+            "Technology implementation",
+            "Operations"
+          ]
+        },
+        {
+          "id": "sa-financial-models",
+          "title": "15+ Financial Models",
+          "subtitle": "Team collaboration",
+          "metric": "15+ models",
+          "summary": "Collaborated with associates to produce 15+ financial models, applying client insights to business analysis and strategic problem-solving.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Financial modeling",
+            "Excel",
+            "Business analysis"
+          ]
+        },
+        {
+          "id": "sa-roadmap",
+          "title": "22-Initiative Investment Roadmap",
+          "subtitle": "Client expansion",
+          "metric": "22 initiatives",
+          "summary": "Developed and presented an investment model and vision implementation roadmap prioritizing 22 initiatives for a client's expansion.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Prioritization",
+            "Roadmapping",
+            "Investment modeling",
+            "Presenting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xingfutang",
+      "name": "Xing Fu Tang",
+      "color": "#D9A21B",
+      "logo": {
+        "src": "assets/xingfutang_logo.png",
+        "fit": "contain"
+      },
+      "banner": {
+        "src": "assets/xingfutang_mascot_banner.png",
+        "mark": "assets/xingfutang_logo.png",
+        "fit": "contain",
+        "position": "right",
+        "bg": "linear-gradient(120deg, #FFF6DD 0%, #FBE3A2 100%)"
+      },
+      "tagline": "Taiwanese bubble tea · 幸福堂",
+      "location": "New York, NY",
+      "phrase": "Expansion strategy for 30+ sites, new flavors, and a gamified ambassador program.",
+      "about": "A Taiwanese bubble-tea brand known for its hand-stirred brown sugar boba, growing across the U.S.",
+      "roles": [
+        {
+          "title": "Product Strategy & Operations Intern",
+          "start": "2025-08",
+          "end": "2026-06"
+        }
+      ],
+      "skills": [
+        "Product strategy",
+        "Gamification",
+        "Market research",
+        "Revenue modeling",
+        "Community"
+      ],
+      "chapters": [
+        {
+          "id": "xft-ambassador",
+          "title": "Gamified Ambassador Program",
+          "subtitle": "Growth & community",
+          "metric": "100K+ views",
+          "summary": "Engineered the flagship ambassador program, using gamified rewards to drive student advocacy and campaigns with 100K+ views.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Gamification",
+            "Growth",
+            "Community",
+            "Campaigns"
+          ]
+        },
+        {
+          "id": "xft-expansion",
+          "title": "Data-Driven Expansion Strategy",
+          "subtitle": "Market research & modeling",
+          "metric": "30+ sites",
+          "summary": "Developed a data-driven expansion strategy for 30+ sites, using market research and revenue modeling to prioritize growth opportunities.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Market research",
+            "Revenue modeling",
+            "Prioritization"
+          ]
+        },
+        {
+          "id": "xft-flavors",
+          "title": "New Flavor Concepts",
+          "subtitle": "Consumer insights → product",
+          "metric": "3+ launches",
+          "summary": "Translated consumer insights into 3+ new flavor concepts, balancing user preferences, market demand, and supplier sourcing constraints.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "User insights",
+            "Product development",
+            "Trade-offs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "methix",
+      "name": "Methix",
+      "color": "#7A1E1E",
+      "logo": {
+        "src": "assets/methix_logo.jpg",
+        "fit": "cover"
+      },
+      "banner": {
+        "src": "assets/methix_logo_banner.png",
+        "fit": "cover",
+        "position": "center",
+        "bg": "#FFFFFF"
+      },
+      "tagline": "Music technology",
+      "location": "New York, NY",
+      "phrase": "Structured music-industry data for AI and built a 25-KPI decision dashboard.",
+      "about": "A music technology company building data and AI tools for the music industry.",
+      "roles": [
+        {
+          "title": "Data Analyst Intern",
+          "start": "2025-06",
+          "end": "2025-08"
+        }
+      ],
+      "skills": [
+        "Python",
+        "SQL",
+        "Power BI",
+        "Power Automate",
+        "Azure",
+        "AI"
+      ],
+      "chapters": [
+        {
+          "id": "mx-knowledge-base",
+          "title": "AI Music Industry Knowledge Base",
+          "subtitle": "Python + SQL",
+          "metric": "50+ datasets",
+          "summary": "Structured 50+ datasets with Python and SQL to support AI and product functions, creating a unique AI music-industry knowledge base.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Python",
+            "SQL",
+            "Data modeling",
+            "AI"
+          ]
+        },
+        {
+          "id": "mx-workflows",
+          "title": "AI-Enabled Workflow Automation",
+          "subtitle": "Power Automate + Azure",
+          "metric": "50% faster ops",
+          "summary": "Optimized AI-enabled workflows with Power Automate and Microsoft Azure, streamlining cross-functional operations by 50%.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Power Automate",
+            "Azure",
+            "Automation"
+          ]
+        },
+        {
+          "id": "mx-kpi-dashboard",
+          "title": "25-KPI Decision Dashboard",
+          "subtitle": "Power BI",
+          "metric": "40% faster GTM",
+          "summary": "Built a Power BI dashboard tracking 25+ KPIs for internal decision-making, accelerating the go-to-market timeline by 40%.",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ],
+          "skills": [
+            "Power BI",
+            "Metrics",
+            "Go-to-market"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sofi",
+      "name": "SoFi",
+      "color": "#00A2C7",
+      "logo": {
+        "src": "assets/sofi_logo.png",
+        "fit": "contain"
+      },
+      "banner": {
+        "src": "assets/sofi_logo_banner.png",
+        "fit": "contain",
+        "position": "center",
+        "bg": "linear-gradient(120deg, #FFFFFF 0%, #E3F6FB 100%)"
+      },
+      "tagline": "FinTech · Personal finance",
+      "location": "New York, NY",
+      "website": "https://www.sofi.com",
+      "phrase": "FinTech externship.",
+      "about": "A U.S. personal finance company and online bank offering student loan refinancing, personal loans, banking, and investing.",
+      "roles": [
+        {
+          "title": "FinTech Extern",
+          "start": "2025-06",
+          "end": "2025-06"
+        }
+      ],
+      "skills": [
+        "FinTech"
+      ],
+      "chapters": [
+        {
+          "id": "sofi-1",
+          "title": "FinTech externship",
+          "subtitle": "Program",
+          "summary": "FinTech externship with SoFi.",
+          "story": [
+            "TODO: what you worked on during the externship and what you took away from it."
+          ],
+          "skills": [
+            "FinTech"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyucsb",
+      "name": "NYU Stern Center for Sustainable Business",
+      "color": "#57068C",
+      "logo": {
+        "src": "assets/nyucsb_logo.png",
+        "fit": "cover"
+      },
+      "banner": {
+        "src": "assets/nyucsb_logo_banner.png",
+        "fit": "contain",
+        "position": "center",
+        "bg": "#FFFFFF"
+      },
+      "tagline": "Research center at NYU Stern",
+      "location": "New York, NY",
+      "phrase": "Analyzed sales of sustainability-marketed products across 30+ CPG categories.",
+      "about": "NYU Stern's research center on the business case for sustainability, including research that tracks how products marketed as sustainable actually sell.",
+      "roles": [
+        {
+          "title": "Sustainability Data Analyst Intern",
+          "start": "2024-06",
+          "end": "2026-01"
+        }
+      ],
+      "skills": [
+        "Excel",
+        "Pivot tables",
+        "Data analysis",
+        "Research",
+        "Sustainability",
+        "CPG"
+      ],
+      "chapters": [
+        {
+          "id": "nyucsb-1",
+          "title": "Excel spreadsheets tracking aggregate sales with VLOOKUPs and pivot tables for sustainability-based dollar sales analysis",
+          "metric": "200+",
+          "summary": "Excel spreadsheets tracking aggregate sales with VLOOKUPs and pivot tables for sustainability-based dollar sales analysis",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ]
+        },
+        {
+          "id": "nyucsb-2",
+          "title": "CPG categories researched for sustainable attributes, pinpointing distinct indicators on retail products",
+          "metric": "30+",
+          "summary": "CPG categories researched for sustainable attributes, pinpointing distinct indicators on retail products",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ]
+        },
+        {
+          "id": "nyucsb-3",
+          "title": "Branding and financial KPIs projected, surfacing trends in renewable-claims branding and pricing",
+          "metric": "10+",
+          "summary": "branding and financial KPIs projected, surfacing trends in renewable-claims branding and pricing",
+          "story": [
+            "TODO: the longer story behind this — the problem, what you did, and what you learned."
+          ]
+        }
+      ]
+    }
+  ]
+}

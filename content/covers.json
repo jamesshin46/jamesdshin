@@ -1,0 +1,56 @@
+{
+  "_help": "Dance covers shown in Fans also like → Choreography (ranked by live YouTube views). channel = the YouTube channel the cover is posted on. orgId links a cover to a club page (it then also shows there). youtubeId = the part after youtu.be/.",
+  "covers": [
+    {
+      "id": "kn-debut",
+      "title": "KATSEYE — Debut (MAMA ver.)",
+      "subtitle": "Kpop in Public NYC · Dance Cover by KNESIS",
+      "crew": "KNESIS",
+      "channel": "KNESIS",
+      "youtubeId": "q-Gh2Pv8jp4",
+      "orgId": "knesis"
+    },
+    {
+      "id": "kn-baggy-jeans",
+      "title": "NCT U — Baggy Jeans (Boys ver.)",
+      "subtitle": "Kpop in Public NYC · Dance Cover by KNESIS",
+      "crew": "KNESIS",
+      "channel": "KNESIS",
+      "youtubeId": "l7-OcJj0RXQ",
+      "orgId": "knesis"
+    },
+    {
+      "id": "kn-redred",
+      "title": "CORTIS — REDRED",
+      "subtitle": "Kpop in Public NYC · One Take · Dance Cover by KNESIS",
+      "crew": "KNESIS",
+      "channel": "KNESIS",
+      "youtubeId": "fJR6GXuYh7M",
+      "orgId": "knesis"
+    },
+    {
+      "id": "f4-bad",
+      "title": "ATEEZ — BAD (24HR Challenge)",
+      "subtitle": "Kpop in Public NYC · Cover by F4MX",
+      "crew": "F4MX",
+      "channel": "tteokbonnie",
+      "youtubeId": "5em4PwMt7nk"
+    },
+    {
+      "id": "f4-fashion",
+      "title": "CORTIS — FASHION",
+      "subtitle": "Kpop in Public NYC · Times Square · Cover by F4MX",
+      "crew": "F4MX",
+      "channel": "tteokbonnie",
+      "youtubeId": "_0VjDvogPn0"
+    },
+    {
+      "id": "f4-look-at-me",
+      "title": "ALLDAY PROJECT — LOOK AT ME",
+      "subtitle": "Kpop in Public NYC · Times Square · Cover by F4MX",
+      "crew": "F4MX",
+      "channel": "tteokbonnie",
+      "youtubeId": "zD9ZnPUwP5s"
+    }
+  ]
+}

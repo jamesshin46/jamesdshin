@@ -4,10 +4,18 @@ import { loadAll, store } from './data.js';
 import { startRouter, onRoute, navigate } from './router.js';
 import { el, clear, present } from './utils.js';
 import { hydrateIcons } from './icons.js';
-import { coverArt } from './covers.js';
+import { orgLogo, orgDatesLabel } from './orgs.js';
 import { initPlayer } from './player.js';
-import { renderArtistPage } from './render-artist.js';
-import { renderAlbumView } from './album-view.js';
+import { initTopbar, setTopbar } from './topbar.js';
+import { renderArtistPage, refreshGreeting } from './render-artist.js';
+import { initOwnerGesture, renderOwnerView } from './owner.js';
+import { renderOrgView } from './org-view.js';
+import { renderLikedView } from './liked-view.js';
+import { likes, onLikesChange } from './likes.js';
+import { icon } from './icons.js';
+import { maybeShowWelcome } from './welcome.js';
+import { isOwner } from './backend.js';
+import { parseHash } from './router.js';
 import { renderSearchView, updateSearchView } from './search.js';
 import { openRecap, closeRecap } from './recap.js';
 import { openPlaces, closePlaces } from './places-map.js';
@@ -25,15 +33,29 @@ function renderShell() {
   const brand = document.getElementById('brand-name');
   if (brand) brand.textContent = store.profile.name ?? '';
 
+  // Your Library: every experience / club / education page, grouped, with logos.
   const list = clear(document.getElementById('library-list'));
-  store.albums.forEach(album => {
-    const sub = [album.type, album.year].filter(present).join(' · ');
-    list.append(el('li', {},
-      el('a', { class: 'library-item', href: `#/album/${encodeURIComponent(album.id)}`, dataset: { album: album.id }, title: album.title },
-        el('span', { class: 'library-art' }, coverArt(album)),
-        el('span', { class: 'library-text' },
-          el('span', { class: 'library-name' }, album.title),
-          present(sub) && el('span', { class: 'library-sub' }, sub)))));
+  // Pinned "Liked" playlist, like Liked Songs.
+  const likedSub = el('span', { class: 'library-sub' });
+  const paintLiked = () => { const n = likes().length; likedSub.textContent = `Playlist · ${n} ${n === 1 ? 'item' : 'items'}`; };
+  paintLiked();
+  onLikesChange(paintLiked);
+  list.append(el('li', {},
+    el('a', { class: 'library-item', href: '#/liked', dataset: { nav: 'liked' }, title: 'Liked' },
+      el('span', { class: 'library-art liked-tile', html: icon('heartFilled', { size: 20 }) }),
+      el('span', { class: 'library-text' }, el('span', { class: 'library-name' }, 'Liked'), likedSub))));
+  [['Experience', store.experience], ['Clubs', store.clubs], ['Education', store.education]].forEach(([label, orgs]) => {
+    if (!orgs.length) return;
+    list.append(el('li', { class: 'library-group micro' }, label));
+    orgs.forEach(org => {
+      const sub = [org.roles[0]?.title, orgDatesLabel(org)].filter(present).join(' · ');
+      list.append(el('li', {},
+        el('a', { class: 'library-item', href: `#/org/${encodeURIComponent(org.id)}`, dataset: { org: org.id }, title: org.name },
+          el('span', { class: `library-art${org.kind === 'club' ? ' is-round' : ''}` }, orgLogo(org)),
+          el('span', { class: 'library-text' },
+            el('span', { class: 'library-name' }, org.name),
+            present(sub) && el('span', { class: 'library-sub' }, sub)))));
+    });
   });
 
   document.getElementById('skip-link')?.addEventListener('click', () => main.focus());
@@ -46,8 +68,8 @@ function setActiveNav(route) {
     if (n.dataset.nav === route.name) n.setAttribute('aria-current', 'page');
     else n.removeAttribute('aria-current');
   });
-  document.querySelectorAll('.library-item').forEach(n => {
-    if (route.name === 'album' && n.dataset.album === route.id) n.setAttribute('aria-current', 'page');
+  document.querySelectorAll('.library-item[data-org]').forEach(n => {
+    if (route.name === 'org' && n.dataset.org === route.id) n.setAttribute('aria-current', 'page');
     else n.removeAttribute('aria-current');
   });
 }
@@ -66,8 +88,11 @@ function goToContact() {
 function renderPage(route) {
   clear(view);
   view.dataset.view = route.name;
-  if (route.name === 'album') renderAlbumView(view, route.id);
-  else if (route.name === 'search') renderSearchView(view, route.q);
+  setTopbar({});
+  if (route.name === 'search') { setTopbar({ threshold: -1 }); renderSearchView(view, route.q); }
+  else if (route.name === 'owner') { setTopbar({ threshold: -1 }); renderOwnerView(view); }
+  else if (route.name === 'org') renderOrgView(view, route.id);
+  else if (route.name === 'liked') renderLikedView(view);
   else renderArtistPage(view);
   currentPageKey = route.key;
 }
@@ -129,9 +154,17 @@ async function boot() {
   }
 
   renderShell();
+  initTopbar();
   initPlayer();
+  initOwnerGesture();
   onRoute(handleRoute);
   startRouter();
+
+  // First visit: welcome popup (not on top of Recap/map deep links, and not for the owner).
+  setTimeout(() => {
+    if (parseHash().modal || isOwner()) return;
+    maybeShowWelcome({ onDone: refreshGreeting });
+  }, 700);
 }
 
 boot();

@@ -18,7 +18,12 @@ const PATHS = {
   github: '<path d="M9 19.5c-4 1.25-4-2-5.5-2.5M14.5 21.5v-3.4a3 3 0 0 0-.85-2.3c2.8-.3 5.85-1.4 5.85-6.3a4.9 4.9 0 0 0-1.35-3.4 4.55 4.55 0 0 0-.1-3.4s-1.1-.35-3.5 1.3a12 12 0 0 0-6.3 0C5.85 2.35 4.75 2.7 4.75 2.7a4.55 4.55 0 0 0-.1 3.4A4.9 4.9 0 0 0 3.3 9.5c0 4.9 3.05 6 5.85 6.3a3 3 0 0 0-.85 2.3v3.4"/>',
   doc: '<path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h6"/>',
   copy: '<rect x="8.25" y="8.25" width="12" height="12" rx="2"/><path d="M15.75 8.25V5.25a1.5 1.5 0 0 0-1.5-1.5h-9a1.5 1.5 0 0 0-1.5 1.5v9a1.5 1.5 0 0 0 1.5 1.5h3"/>',
-  chevronDown: '<path d="m5.5 9.5 6.5 6.5 6.5-6.5"/>'
+  chevronDown: '<path d="m5.5 9.5 6.5 6.5 6.5-6.5"/>',
+  queue: '<path d="M3.75 6.5h10.5M3.75 11.5h10.5M3.75 16.5h6"/><path d="M18 17.25V5.5l3-.75"/><circle cx="16" cy="17.25" r="2"/>',
+  heart: '<path d="M12 20s-7.25-4.45-7.25-10A4.1 4.1 0 0 1 12 7.35 4.1 4.1 0 0 1 19.25 10c0 5.55-7.25 10-7.25 10z"/>',
+  heartFilled: '<path d="M12 20s-7.25-4.45-7.25-10A4.1 4.1 0 0 1 12 7.35 4.1 4.1 0 0 1 19.25 10c0 5.55-7.25 10-7.25 10z" fill="currentColor"/>',
+  lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/>',
+  trash: '<path d="M4.5 6.75h15M9.75 6.75V5a1.25 1.25 0 0 1 1.25-1.25h2A1.25 1.25 0 0 1 14.25 5v1.75M6.5 6.75l.8 12a1.5 1.5 0 0 0 1.5 1.4h6.4a1.5 1.5 0 0 0 1.5-1.4l.8-12"/>'
 };
 
 /** Returns an inline SVG string for a named icon. */
@@ -26,6 +31,17 @@ export function icon(name, { size = 24, label } = {}) {
   const body = PATHS[name] ?? '';
   const a11y = label ? `role="img" aria-label="${label}"` : 'aria-hidden="true" focusable="false"';
   return `<svg class="icon icon-${name}" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ${a11y}>${body}</svg>`;
+}
+
+/** Scalloped "verified" rosette with a check, in the accent color. */
+export function verifiedBadge(size = 24) {
+  const pts = [];
+  for (let i = 0; i < 24; i++) {
+    const r = i % 2 ? 10.1 : 11.6;
+    const a = (Math.PI * 2 * i) / 24 - Math.PI / 2;
+    pts.push(`${(12 + r * Math.cos(a)).toFixed(2)},${(12 + r * Math.sin(a)).toFixed(2)}`);
+  }
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="${pts.join(' ')}" fill="var(--accent)"/><path d="m7.6 12.3 2.9 2.9 5.9-6.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 }
 
 /** Fills every element with [data-icon] inside root with its SVG. */

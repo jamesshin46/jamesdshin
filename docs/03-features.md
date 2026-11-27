@@ -197,3 +197,65 @@ Back/forward buttons must work. Scroll to top on route change (except modals).
 - Open Graph + Twitter card tags; `og:image` = `assets/og-image.png` (1200×630) if it exists.
 - Favicon: simple "JS" monogram SVG in accent color (create `assets/favicon.svg`).
 - `<noscript>` fallback with name, tagline, email, and LinkedIn.
+
+---
+
+## 11. Guestbook, owner view & listener pick (added by James)
+- **Welcome popup** (`js/welcome.js`): first visit only (remembered in localStorage `jds-visitor`).
+  Asks for name, favorite song, optional artist; skippable. Copy lives in `profile.json → welcome`.
+  The visitor's name personalizes the greeting ("Good evening, Alex").
+- **Storage** (`js/backend.js`): Supabase via plain `fetch` (no library). Config in
+  `content/backend.json`; schema + Row Level Security in `supabase/setup.sql`. Visitors can only
+  insert; only the owner can read/delete. Until configured, runs in demo mode (localStorage).
+- **Owner view** (`js/owner.js`, route `#/owner`): press Home 10× in a row → password prompt
+  (checked by Supabase Auth, never in code) → "Favorite songs" nav item appears. Lists every
+  submission; Feature / look up / delete.
+- **Listener pick**: the featured song shows between the hero and the action bar for everyone.
+
+## 12. Experience, clubs & profile pages (added by James)
+- **Experience** (`content/experience.json`) replaces Popular: logo node, company, role, dates,
+  one phrase; upcoming roles show a "Starts in N days" pill.
+- **Clubs & communities** (`content/clubs.json`) replaces Artist pick: circular logo shelf.
+- Logos sit in an "orb" with a slowly rotating ring in the org's color and a light sweep on hover.
+- Clicking either opens a **profile page** (`#/org/{id}`, `js/org-view.js`, `css/org.css`) laid out
+  like a LinkedIn profile: banner (image, video, or generated from color + logo), logo overlapping
+  the banner, name/tagline/meta (location · dates · tenure), then a **role timeline** (one lane per
+  role on a shared time axis, current role with a pulsing playhead), Highlights, About, Skills,
+  and a "More experience / More clubs" shelf.
+- Role dates are `YYYY-MM` (end may be `present`); durations are computed LinkedIn-style.
+
+## 13. Albums = experiences (supersedes §2b Popular, §2c Discography, §3 Albums)
+- `content/albums.json` was retired. Every experience, club, and education entry is an "album"
+  page (`#/org/{id}`; old `#/album/{id}` links redirect). Its **chapters** are the tracks: each row
+  expands into a deep dive (metric, summary, `story` paragraphs James writes, skills). Playing a
+  chapter updates the now-playing bar; ⏮/⏭ step through every chapter in playlist order
+  (experience → clubs → education). Each page ends with an **Up next** card to the next page.
+- Dance covers live in `content/covers.json` (home "Dance covers" row + a club's "Performances").
+  `scripts/fetch-views.mjs` reads YouTube IDs from there.
+- Sidebar "Your Library" lists all pages grouped (Experience / Clubs / Education) with logos.
+- Footer: only `profile.footer` (James removed the "Built by…" line and the disclaimer).
+
+## 14. Spotify song search in the welcome popup
+- Song field is a combobox: typing searches Spotify through the `spotify-search` Supabase Edge
+  Function (`supabase/functions/spotify-search/index.ts`; secrets hold the Spotify client ID/secret).
+  Picking a track saves `spotify_id`, `album`, `cover_url`, `track_url` (columns from
+  `supabase/002_song_details.sql`). Falls back to free typing if search is unavailable.
+
+## 15. Pre-release albums, Choreography reel, hero visualizer
+- An `"status": "upcoming"` page with a future `start` date is a **pre-release album**: Play is
+  locked, the tracklist is greyed out and unplayable, and a live days/hours/min/sec countdown runs
+  to release day; its chapters are skipped by the player until then.
+- Dance covers are shown from **Fans also like → Choreography** (`"type": "videos"` in
+  interests.json): a film-strip reel ranked by live views, with a count-up number and a meter
+  scaled to the most-viewed cover. Videos open on YouTube (no embedded player; many covers
+  block playback on other sites).
+- Hero hover: the equalizer reacts to the cursor like a visualizer and a soft spotlight follows
+  the mouse (no pointer parallax). Scroll parallax remains. All off under reduced motion.
+
+
+## 16. Liked
+- Heart on every experience / club / school (album page header, home timeline rows, club circles). Likes are saved per browser (localStorage `jds-liked`) and listed on `#/liked`, a playlist page pinned at the top of Your Library (and a Liked tab on mobile). Play starts the first liked album.
+
+- Likes are also sent anonymously (+1 / −1) to Supabase table `page_likes` (`supabase/003_likes.sql`); owner view shows a "Most liked" chart.
+- Roles ending in the future but already started count as current ("Now", playhead at today, rest of bar dimmed); durations count time so far.
+- Education entries can list `localClubs` (clubs that exist only there, e.g. Yonsei), shown only on that school's page.

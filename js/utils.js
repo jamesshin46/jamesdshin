@@ -81,6 +81,19 @@ export function timeAgo(iso, now = Date.now()) {
   return new Date(t).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
+/** Whole days from today until an ISO date (negative if past), or null. */
+export function daysUntil(iso) {
+  const t = Date.parse(iso ?? '');
+  if (!Number.isFinite(t)) return null;
+  return Math.ceil((t - Date.now()) / 86_400_000);
+}
+
+/** YouTube search link for a song (no API key needed). */
+export function listenUrl(song, artist) {
+  const q = [song, artist].filter(present).join(' ');
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;
+}
+
 /** Greeting key for the visitor's local hour. */
 export function greetingKey(hour = new Date().getHours()) {
   if (hour >= 5 && hour < 12) return 'morning';
