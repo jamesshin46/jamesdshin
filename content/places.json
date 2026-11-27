@@ -1,0 +1,36 @@
+{
+  "_help": "Add your real spots here. For each place, fill in name, neighborhood, address, note, and order. lat/lng: right-click the place in Google Maps and click the coordinates to copy them (e.g. 40.7291, -73.9965) — or leave them null and ask Claude Code to look them up. Delete the two TEMPLATE entries when you're done.",
+  "categories": [
+    { "id": "cafes",     "label": "Cafés",         "emoji": "☕", "intro": "My favorite NYC cafés — for studying, catching up, or a really good latte." },
+    { "id": "asianfood", "label": "Asian Cuisine", "emoji": "🍜", "intro": "Where I actually eat — Korean, Chinese, Japanese, and everything in between." }
+  ],
+  "tags": ["Study spot", "Matcha", "Pastries", "Late night", "Date spot", "Cheap eats", "Group dinner", "Korean", "Chinese", "Japanese", "Thai", "Vietnamese"],
+  "places": [
+    {
+      "id": "template-cafe",
+      "category": "cafes",
+      "name": "TODO: Café name",
+      "neighborhood": "e.g. Greenwich Village",
+      "address": "e.g. 123 Example St, New York, NY",
+      "lat": null,
+      "lng": null,
+      "rating": 5,
+      "note": "Your personal note — why you love it, when to go.",
+      "order": "What to order",
+      "tags": ["Study spot"]
+    },
+    {
+      "id": "template-food",
+      "category": "asianfood",
+      "name": "TODO: Restaurant name",
+      "neighborhood": "e.g. Koreatown",
+      "address": "e.g. 32 W 32nd St, New York, NY",
+      "lat": null,
+      "lng": null,
+      "rating": 5,
+      "note": "Your personal note.",
+      "order": "What to order",
+      "tags": ["Korean", "Group dinner"]
+    }
+  ]
+}

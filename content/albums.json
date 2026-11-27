@@ -1,0 +1,407 @@
+{
+  "categories": [
+    { "id": "all",         "label": "All" },
+    { "id": "work",        "label": "Work" },
+    { "id": "performance", "label": "Performance" },
+    { "id": "leadership",  "label": "Leadership" },
+    { "id": "education",   "label": "Education" }
+  ],
+
+  "albums": [
+    {
+      "id": "paulweiss",
+      "title": "Paul, Weiss",
+      "subtitle": "Restructuring & Business Analyst Intern",
+      "year": "2027",
+      "category": "work",
+      "type": "Upcoming Single",
+      "status": "upcoming",
+      "releaseDate": "2027-01-04",
+      "color": "#8A6BFF",
+      "cover": null,
+      "role": "Incoming Restructuring & Business Analyst Intern",
+      "dates": "Jan 2027",
+      "location": "New York, NY",
+      "description": "Paul, Weiss, Rifkind, Wharton & Garrison LLP. The next release — dropping January 2027.",
+      "tracks": []
+    },
+    {
+      "id": "strategyand",
+      "title": "Strategy&",
+      "subtitle": "Consulting Summer Associate",
+      "year": "2026",
+      "category": "work",
+      "type": "Album",
+      "color": "#E2563B",
+      "cover": null,
+      "role": "Consulting Summer Associate — Enterprise & Functional Strategy",
+      "dates": "Jun – Aug 2026",
+      "location": "New York, NY",
+      "description": "A summer building strategy, models, and roadmaps for enterprise clients.",
+      "tracks": [
+        {
+          "id": "sa-tech-strategy",
+          "title": "End-to-End Tech Implementation Strategy",
+          "subtitle": "Client strategy",
+          "kind": "highlight",
+          "metric": "$10M profit lift",
+          "detail": "Constructed an end-to-end technology implementation strategy for clients, stabilizing business operations and increasing profits by $10M.",
+          "skills": ["Strategy", "Technology implementation", "Operations"]
+        },
+        {
+          "id": "sa-financial-models",
+          "title": "15+ Financial Models",
+          "subtitle": "Team collaboration",
+          "kind": "highlight",
+          "metric": "15+ models",
+          "detail": "Collaborated with associates to produce 15+ financial models, applying client insights to business analysis and strategic problem-solving.",
+          "skills": ["Financial modeling", "Excel", "Business analysis"]
+        },
+        {
+          "id": "sa-roadmap",
+          "title": "22-Initiative Investment Roadmap",
+          "subtitle": "Client expansion",
+          "kind": "highlight",
+          "metric": "22 initiatives",
+          "detail": "Developed and presented an investment model and vision implementation roadmap prioritizing 22 initiatives for a client's expansion.",
+          "_note": "James: résumé says 'M&Q expansion' — confirm if this should be 'M&A expansion' and update the detail above.",
+          "skills": ["Prioritization", "Roadmapping", "Investment modeling", "Presenting"]
+        }
+      ]
+    },
+    {
+      "id": "xingfutang",
+      "title": "Xing Fu Tang",
+      "subtitle": "Product Strategy & Operations Intern",
+      "year": "2025–26",
+      "category": "work",
+      "type": "Album",
+      "color": "#C98A3D",
+      "cover": null,
+      "role": "Product Strategy and Operations Intern",
+      "dates": "Aug 2025 – Jun 2026",
+      "location": "New York, NY",
+      "description": "Product strategy for a fast-growing bubble-tea brand: where to grow, what to launch, and how to turn customers into advocates.",
+      "tracks": [
+        {
+          "id": "xft-ambassador",
+          "title": "Gamified Ambassador Program",
+          "subtitle": "Growth & community",
+          "kind": "highlight",
+          "metric": "100K+ views",
+          "detail": "Engineered the flagship ambassador program, using gamified rewards to drive student advocacy and campaigns with 100K+ views.",
+          "skills": ["Gamification", "Growth", "Community", "Campaigns"]
+        },
+        {
+          "id": "xft-expansion",
+          "title": "Data-Driven Expansion Strategy",
+          "subtitle": "Market research & modeling",
+          "kind": "highlight",
+          "metric": "30+ sites",
+          "detail": "Developed a data-driven expansion strategy for 30+ sites, using market research and revenue modeling to prioritize growth opportunities.",
+          "skills": ["Market research", "Revenue modeling", "Prioritization"]
+        },
+        {
+          "id": "xft-flavors",
+          "title": "New Flavor Concepts",
+          "subtitle": "Consumer insights → product",
+          "kind": "highlight",
+          "metric": "3+ launches",
+          "detail": "Translated consumer insights into 3+ new flavor concepts, balancing user preferences, market demand, and supplier sourcing constraints.",
+          "skills": ["User insights", "Product development", "Trade-offs"]
+        }
+      ]
+    },
+    {
+      "id": "methix",
+      "title": "Methix",
+      "subtitle": "Data Analyst Intern · Music Tech",
+      "year": "2025",
+      "category": "work",
+      "type": "EP",
+      "color": "#2FB6C9",
+      "cover": null,
+      "role": "Data Analyst Intern",
+      "dates": "Jun – Aug 2025",
+      "location": "New York, NY",
+      "description": "Data and AI workflows at a music technology firm — where music meets machine learning.",
+      "tracks": [
+        {
+          "id": "mx-knowledge-base",
+          "title": "AI Music Industry Knowledge Base",
+          "subtitle": "Python + SQL",
+          "kind": "highlight",
+          "metric": "50+ datasets",
+          "detail": "Structured 50+ datasets with Python and SQL to support AI and product functions, creating a unique AI music-industry knowledge base.",
+          "skills": ["Python", "SQL", "Data modeling", "AI"]
+        },
+        {
+          "id": "mx-workflows",
+          "title": "AI-Enabled Workflow Automation",
+          "subtitle": "Power Automate + Azure",
+          "kind": "highlight",
+          "metric": "50% faster ops",
+          "detail": "Optimized AI-enabled workflows with Power Automate and Microsoft Azure, streamlining cross-functional operations by 50%.",
+          "skills": ["Power Automate", "Azure", "Automation"]
+        },
+        {
+          "id": "mx-kpi-dashboard",
+          "title": "25-KPI Decision Dashboard",
+          "subtitle": "Power BI",
+          "kind": "highlight",
+          "metric": "40% faster GTM",
+          "detail": "Built a Power BI dashboard tracking 25+ KPIs for internal decision-making, accelerating the go-to-market timeline by 40%.",
+          "skills": ["Power BI", "Metrics", "Go-to-market"]
+        }
+      ]
+    },
+    {
+      "id": "knesis",
+      "title": "KNESIS",
+      "subtitle": "K-Pop Cover Dance Team · Vice President",
+      "year": "2024–Now",
+      "category": "performance",
+      "type": "Live Album",
+      "color": "#E0457B",
+      "cover": null,
+      "role": "Vice President",
+      "dates": "Feb 2024 – Present",
+      "location": "New York, NY",
+      "description": "NYU's K-pop cover dance team. I help lead 150+ members across 40+ covers, run our social channels, and build partnerships with clubs and brands.",
+      "tracks": [
+        {
+          "id": "kn-debut",
+          "title": "KATSEYE — Debut (MAMA ver.)",
+          "subtitle": "Kpop in Public NYC · Dance Cover by KNESIS",
+          "kind": "video",
+          "youtubeId": "q-Gh2Pv8jp4"
+        },
+        {
+          "id": "kn-baggy-jeans",
+          "title": "NCT U — Baggy Jeans (Boys ver.)",
+          "subtitle": "Kpop in Public NYC · Dance Cover by KNESIS",
+          "kind": "video",
+          "youtubeId": "l7-OcJj0RXQ"
+        },
+        {
+          "id": "kn-redred",
+          "title": "CORTIS — REDRED",
+          "subtitle": "Kpop in Public NYC · One Take · Dance Cover by KNESIS",
+          "kind": "video",
+          "youtubeId": "fJR6GXuYh7M"
+        },
+        {
+          "id": "kn-social-growth",
+          "title": "Growing KNESIS Online",
+          "subtitle": "Social media & marketing",
+          "kind": "highlight",
+          "metric": "2.5M+ views",
+          "detail": "Ran marketing for social channels with 20K+ followers, increasing content engagement by 50% and reaching 2.5M+ views.",
+          "skills": ["Content strategy", "Social media", "Engagement", "Video editing"]
+        },
+        {
+          "id": "kn-production",
+          "title": "40+ Covers, 150+ Members",
+          "subtitle": "Production & operations",
+          "kind": "highlight",
+          "metric": "40+ covers",
+          "detail": "Organized 40+ K-pop covers for 150+ members — managing budget, resolving scheduling conflicts, and raising performance quality.",
+          "skills": ["Project management", "Budgeting", "Team leadership"]
+        },
+        {
+          "id": "kn-collabs",
+          "title": "Collabs incl. PUBG Studios",
+          "subtitle": "Partnerships",
+          "kind": "highlight",
+          "metric": "40+ collabs",
+          "detail": "Coordinated 40+ collaborations with student clubs and external organizations, including PUBG Studios, expanding the team's reach.",
+          "skills": ["Partnerships", "Gaming", "Outreach"]
+        }
+      ]
+    },
+    {
+      "id": "f4mx",
+      "title": "F4MX",
+      "subtitle": "Dance Covers · Times Square & NYC",
+      "year": "2025–Now",
+      "category": "performance",
+      "type": "EP",
+      "color": "#FF8A3D",
+      "cover": null,
+      "role": "Dancer",
+      "dates": "TODO: dates",
+      "location": "New York, NY",
+      "description": "Covers outside KNESIS with F4MX — filmed live in Times Square and around New York.",
+      "tracks": [
+        {
+          "id": "f4-bad",
+          "title": "ATEEZ — BAD (24HR Challenge)",
+          "subtitle": "Kpop in Public NYC · Cover by F4MX",
+          "kind": "video",
+          "youtubeId": "5em4PwMt7nk"
+        },
+        {
+          "id": "f4-fashion",
+          "title": "CORTIS — FASHION",
+          "subtitle": "Kpop in Public NYC · Times Square · Cover by F4MX",
+          "kind": "video",
+          "youtubeId": "_0VjDvogPn0"
+        },
+        {
+          "id": "f4-look-at-me",
+          "title": "ALLDAY PROJECT — LOOK AT ME",
+          "subtitle": "Kpop in Public NYC · Times Square · Cover by F4MX",
+          "kind": "video",
+          "youtubeId": "zD9ZnPUwP5s"
+        }
+      ]
+    },
+    {
+      "id": "acu",
+      "title": "Asian Cultural Union",
+      "subtitle": "President",
+      "year": "2024–Now",
+      "category": "leadership",
+      "type": "Album",
+      "color": "#3D8BFF",
+      "cover": null,
+      "role": "President · formerly VP of Events & Marketing Committee",
+      "dates": "Feb 2024 – Present",
+      "location": "New York, NY",
+      "description": "Leading one of NYU's cultural communities — big events, real partnerships, and a team that runs like a product org.",
+      "tracks": [
+        {
+          "id": "acu-events",
+          "title": "20+ Cultural Events",
+          "subtitle": "Events & experiences",
+          "kind": "highlight",
+          "metric": "300+ per event",
+          "detail": "Planned 20+ large cultural events with 300+ attendees each, managing logistics, programming, and brand-consistent experiences.",
+          "skills": ["Event production", "Brand", "Operations"]
+        },
+        {
+          "id": "acu-partners",
+          "title": "30+ Community Partners",
+          "subtitle": "Partnerships",
+          "kind": "highlight",
+          "metric": "30+ partners",
+          "detail": "Built and maintained relationships with 30+ local companies, speakers, vendors, and community partners to source event opportunities.",
+          "skills": ["Partnerships", "Relationship building"]
+        },
+        {
+          "id": "acu-team",
+          "title": "Cross-Functional Leadership",
+          "subtitle": "Weekly team syncs",
+          "kind": "highlight",
+          "metric": "Weekly",
+          "detail": "Led weekly cross-functional committee meetings, delegating responsibilities and resolving issues to ensure seamless events.",
+          "skills": ["Leadership", "Delegation", "Cross-functional"]
+        }
+      ]
+    },
+    {
+      "id": "bap",
+      "title": "Beta Alpha Psi",
+      "subtitle": "Finance & Accounting Honors Society",
+      "year": "2024–Now",
+      "category": "leadership",
+      "type": "EP",
+      "color": "#2E9E6E",
+      "cover": null,
+      "role": "VP of Reporting · Candidate Master Chair · Vice Chair of Mentoring",
+      "dates": "Sep 2024 – Present",
+      "location": "New York, NY",
+      "description": "Building community, mentorship, and professional development for the next class of finance and accounting students.",
+      "tracks": [
+        {
+          "id": "bap-candidates",
+          "title": "Candidate Experience",
+          "subtitle": "Mentorship & belonging",
+          "kind": "highlight",
+          "metric": "250+ candidates",
+          "detail": "Ran creative events for 250+ candidates, facilitating professional mentorship and building a strong sense of unity and belonging.",
+          "skills": ["Mentorship", "Community", "Program design"]
+        },
+        {
+          "id": "bap-workshops",
+          "title": "60+ Hours of Programming",
+          "subtitle": "Workshops & service",
+          "kind": "highlight",
+          "metric": "60+ hours",
+          "detail": "Structured 60+ hours of workshops and community service events, prioritizing professional development and philanthropic engagement.",
+          "skills": ["Program management", "Prioritization"]
+        },
+        {
+          "id": "bap-inquiries",
+          "title": "200+ Member Cases",
+          "subtitle": "Member support",
+          "kind": "highlight",
+          "metric": "200+ inquiries",
+          "detail": "Managed 200+ individual inquiries about extenuating circumstances, improving community involvement and increasing participation.",
+          "skills": ["Member support", "Operations"]
+        }
+      ]
+    },
+    {
+      "id": "nyu",
+      "title": "NYU Stern",
+      "subtitle": "B.S. Business · B.A. Computer Science",
+      "year": "2023–27",
+      "category": "education",
+      "type": "Album",
+      "color": "#7B4FD6",
+      "cover": null,
+      "role": "Student — Finance & Data Science concentrations",
+      "dates": "Expected May 2027",
+      "location": "New York, NY",
+      "description": "Leonard N. Stern School of Business — B.S. in Business (Finance and Data Science) and B.A. in Computer Science. GPA 3.80.",
+      "tracks": [
+        {
+          "id": "nyu-gpa",
+          "title": "Business + Computer Science",
+          "subtitle": "Double degree",
+          "kind": "highlight",
+          "metric": "3.80 GPA",
+          "detail": "B.S. in Business with concentrations in Finance and Data Science, plus a B.A. in Computer Science.",
+          "skills": ["Finance", "Data science", "Computer science"]
+        },
+        {
+          "id": "nyu-splitlease",
+          "title": "SplitLease",
+          "subtitle": "Personal project · JavaScript, CSS",
+          "kind": "highlight",
+          "metric": "Built it",
+          "detail": "TODO: one or two sentences on what SplitLease does and who it's for. Add a link if it's live or on GitHub.",
+          "skills": ["JavaScript", "CSS", "Product building"]
+        },
+        {
+          "id": "nyu-pwc",
+          "title": "PwC Technology Consulting Simulation",
+          "subtitle": "Program",
+          "kind": "highlight",
+          "metric": "Completed",
+          "detail": "Completed PwC's technology consulting simulation program.",
+          "skills": ["Technology consulting"]
+        },
+        {
+          "id": "nyu-sofi",
+          "title": "SoFi FinTech Extern",
+          "subtitle": "Program",
+          "kind": "highlight",
+          "metric": "Completed",
+          "detail": "FinTech externship with SoFi.",
+          "skills": ["FinTech"]
+        },
+        {
+          "id": "nyu-clubs",
+          "title": "Net Impact & Bridges for Enterprise",
+          "subtitle": "Consulting & advisory clubs",
+          "kind": "highlight",
+          "metric": "2 clubs",
+          "detail": "Sustainability Consulting Associate and Financial Analyst at Net Impact; Financial Advisory Associate at Bridges for Enterprise.",
+          "skills": ["Consulting", "Financial analysis", "Sustainability"]
+        }
+      ]
+    }
+  ]
+}

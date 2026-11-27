@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>James Shin · Product · Strategy · Media</title>
+  <meta name="theme-color" content="#0B0B0F">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <button class="skip-link" type="button" id="skip-link">Skip to content</button>
+
+  <div class="app" id="app">
+    <!-- Sidebar (desktop) / icon rail (tablet) — hidden on mobile -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <a class="brand" href="#/" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">JS</span>
+        <span class="brand-name" id="brand-name"></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-item" href="#/" data-nav="home">
+          <span class="nav-icon" data-icon="home" aria-hidden="true"></span>
+          <span class="nav-label">Home</span>
+        </a>
+        <a class="nav-item" href="#/search" data-nav="search">
+          <span class="nav-icon" data-icon="search" aria-hidden="true"></span>
+          <span class="nav-label">Search</span>
+        </a>
+      </nav>
+
+      <section class="library" aria-labelledby="library-title">
+        <h2 class="library-title" id="library-title">
+          <span class="nav-icon" data-icon="library" aria-hidden="true"></span>
+          <span class="nav-label">Your Library</span>
+        </h2>
+        <ul class="library-list" id="library-list"></ul>
+      </section>
+    </aside>
+
+    <!-- Main scrolling content: the router renders views into #view -->
+    <main class="main" id="main" tabindex="-1">
+      <div class="view" id="view" aria-live="polite"></div>
+    </main>
+
+    <!-- Persistent now-playing bar -->
+    <section class="now-playing" id="now-playing" aria-label="Now playing"></section>
+
+    <!-- Mobile bottom tab bar -->
+    <nav class="tabbar" aria-label="Mobile navigation">
+      <a class="tab" href="#/" data-nav="home">
+        <span class="tab-icon" data-icon="home" aria-hidden="true"></span><span>Home</span>
+      </a>
+      <a class="tab" href="#/search" data-nav="search">
+        <span class="tab-icon" data-icon="search" aria-hidden="true"></span><span>Search</span>
+      </a>
+      <a class="tab" href="#/recap" data-nav="recap">
+        <span class="tab-icon" data-icon="recap" aria-hidden="true"></span><span>Recap</span>
+      </a>
+      <button class="tab" type="button" data-nav="contact" id="tab-contact">
+        <span class="tab-icon" data-icon="mail" aria-hidden="true"></span><span>Contact</span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+</body>
+</html>

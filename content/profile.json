@@ -1,0 +1,58 @@
+{
+  "name": "James Shin",
+  "label": "PORTFOLIO",
+  "tagline": "Product, strategy & media. Business + CS @ NYU Stern. I build things people show up for — on screen and on stage.",
+  "headshot": "assets/headshot.jpg",
+  "aboutImage": "assets/about.jpg",
+  "headlineStatFallback": "2.5M+ views across my dance covers & content",
+  "stats": [
+    "2.5M+ social views",
+    "20K+ followers",
+    "3.80 GPA",
+    "10 instruments"
+  ],
+  "resumeUrl": "assets/James_Shin_Resume.pdf",
+  "metaDescription": "James Shin — product, strategy, and media. NYU Stern Business + Computer Science. Consulting at Strategy&, product strategy at Xing Fu Tang, data at Methix, and 2.5M+ views as a dance performer.",
+  "searchKeywords": [
+    "product management", "PM", "media", "entertainment", "games", "music", "streaming",
+    "strategy", "consulting", "finance", "data science", "computer science", "fintech"
+  ],
+
+  "greetings": {
+    "morning":   { "title": "Good morning",       "subtitle": "Coffee first, then the discography." },
+    "afternoon": { "title": "Good afternoon",     "subtitle": "Here's what's been on repeat." },
+    "evening":   { "title": "Good evening",       "subtitle": "Settle in — the full catalog is below." },
+    "lateNight": { "title": "Late-night session", "subtitle": "The best ideas happen after midnight." }
+  },
+
+  "popular": [
+    { "albumId": "strategyand",   "trackId": "sa-tech-strategy",     "title": "End-to-End Tech Implementation Strategy", "subtitle": "Strategy&",                  "metric": "$10M profit lift" },
+    { "albumId": "knesis",        "trackId": "kn-social-growth",     "title": "Growing KNESIS Online",                   "subtitle": "KNESIS",                     "metric": "2.5M+ views" },
+    { "albumId": "xingfutang",    "trackId": "xft-ambassador",       "title": "Gamified Ambassador Program",             "subtitle": "Xing Fu Tang",               "metric": "100K+ views" },
+    { "albumId": "methix",        "trackId": "mx-kpi-dashboard",     "title": "25-KPI Decision Dashboard",               "subtitle": "Methix",                     "metric": "40% faster GTM" },
+    { "albumId": "acu",           "trackId": "acu-events",           "title": "20+ Cultural Events",                     "subtitle": "Asian Cultural Union",       "metric": "300+ per event" }
+  ],
+
+  "bio": [
+    "I'm a Business and Computer Science student at NYU Stern (Finance + Data Science concentrations), graduating May 2027. I'm drawn to the products people spend their free time in — music, video, games — and to the strategy and data that make them grow.",
+    "I've built expansion and product strategies as a consulting summer associate at Strategy&, turned consumer insights into new products and a gamified ambassador program at Xing Fu Tang, and structured music-industry data for AI at Methix. Next up: restructuring at Paul, Weiss in January 2027.",
+    "Off the clock, I lead dance covers that have reached millions of views, play ten instruments, run large community events, and am always looking for the next great café."
+  ],
+  "quickFacts": [
+    { "label": "School",    "value": "NYU Stern — B.S. Business & B.A. Computer Science, May 2027" },
+    { "label": "Based in",  "value": "New York, NY" },
+    { "label": "Languages", "value": "Korean (native), English, Spanish (conversational)" },
+    { "label": "Toolkit",   "value": "Python, SQL, Java, C++, HTML/JS, Power BI, Figma, Excel, Azure, Premiere Pro" }
+  ],
+
+  "contact": {
+    "headline": "Let's build something people come back to.",
+    "links": [
+      { "type": "email",    "label": "Email",    "value": "james.shin@stern.nyu.edu", "url": "mailto:james.shin@stern.nyu.edu" },
+      { "type": "linkedin", "label": "LinkedIn", "value": "TODO: your LinkedIn URL",  "url": "TODO" },
+      { "type": "github",   "label": "GitHub",   "value": "github.com/jamesshin46",   "url": "https://github.com/jamesshin46" }
+    ]
+  },
+
+  "footer": "© 2026 James Shin · New York"
+}

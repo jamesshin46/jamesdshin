@@ -1,0 +1,12 @@
+{
+  "interests": [
+    { "id": "cafes",     "label": "Cafés",            "emoji": "☕", "caption": "My NYC café map",        "type": "map",  "placesCategory": "cafes" },
+    { "id": "asianfood", "label": "Asian Cuisine",    "emoji": "🍜", "caption": "Where I actually eat",    "type": "map",  "placesCategory": "asianfood" },
+    { "id": "tea",       "label": "Tea",              "emoji": "🍵", "caption": "Matcha to oolong",        "type": "info", "detail": "TODO: a line about your tea taste — favorite tea, go-to order." },
+    { "id": "dance",     "label": "Choreography",     "emoji": "💃", "caption": "40+ covers",              "type": "info", "detail": "I've performed and helped produce 40+ dance covers — see the KNESIS and F4MX albums." },
+    { "id": "music",     "label": "Instruments",      "emoji": "🎹", "caption": "10 and counting",         "type": "info", "detail": "TODO: list your 10 instruments (e.g. piano, guitar, ...)." },
+    { "id": "pool",      "label": "Pool",             "emoji": "🎱", "caption": "Billiards",               "type": "info", "detail": "TODO: a fun line about pool — favorite spot, best shot." },
+    { "id": "media",     "label": "Media & Entertainment", "emoji": "🎧", "caption": "Music, video, games", "type": "info", "detail": "The products I spend my free time in are the ones I want to build." },
+    { "id": "introspection", "label": "Introspection", "emoji": "🌙", "caption": "Thinking time",          "type": "info", "detail": "TODO: a line about how you reflect — journaling, long walks, etc." }
+  ]
+}

@@ -1,0 +1,40 @@
+name: Update YouTube view counts
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # every hour at :17 (UTC)
+  workflow_dispatch:        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-views
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch latest view counts
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: node scripts/fetch-views.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/views.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/views.json
+          git commit -m "chore: update YouTube view counts"
+          git push
