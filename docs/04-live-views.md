@@ -32,7 +32,7 @@ every second anyway. Hourly is honest and free.
 ```
 The site must work if `updatedAt` is null or `videos` is empty (fallback numbers, no LIVE badge).
 
-## One-time setup (James does this — see README.md for click-by-click steps)
+## One-time setup (James does this — see docs/06-setup-guide.md for click-by-click steps)
 1. Create a Google Cloud project, enable **YouTube Data API v3**, create an **API key**, and restrict
    it to "YouTube Data API v3" only.
 2. In the GitHub repo: Settings → Secrets and variables → Actions → New repository secret →
