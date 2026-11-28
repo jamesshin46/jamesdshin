@@ -8,6 +8,3 @@ enjoy, watch dance covers with live YouTube view counts, flip through a Recap of
 share a favorite song when they arrive.
 
 **Live site:** [jamesdshin.com](https://jamesdshin.com)
-
-Hand-coded with plain HTML, CSS, and JavaScript, hosted on GitHub Pages. View counts refresh
-hourly through a GitHub Action; the guestbook and likes are stored in Supabase.
